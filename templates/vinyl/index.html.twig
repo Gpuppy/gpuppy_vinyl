@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    <style>
+
+    </style>
+
+    <div class="example-wrapper">
+        <h1>Vinyles ✅</h1>
+
+        {% for vinyl in vinyls %}
+        <h1>{% vinyl.title %}</h1>
+        <strong>{% vinyl.price %}</strong>
+        <p>{% vinyl.content %}</p>
+
+    This friendly message is coming from:
+    <ul>
+        <li>Your controller at <code><a href="{{ 'C:/xampp/htdocs/gpuppy_vinyl/src/Controller/VinylController.php'|file_link(0) }}">src/Controller/VinylController.php</a></code></li>
+        <li>Your template at <code><a href="{{ 'C:/xampp/htdocs/gpuppy_vinyl/templates/vinyl/index.html.twig'|file_link(0) }}">templates/vinyl/index.html.twig</a></code></li>
+    </ul>
+</div>
+{% endblock %}
