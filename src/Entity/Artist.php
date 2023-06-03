@@ -18,7 +18,7 @@ class Artist
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
-    #[ORM\OneToMany(mappedBy: 'Artiste', targetEntity: Vinyl::class)]
+    #[ORM\OneToMany(mappedBy: 'artist', targetEntity: Vinyl::class)]
     private Collection $vinyls;
 
     public function __construct()
@@ -50,12 +50,23 @@ class Artist
     {
         return $this->vinyls;
     }
+    public function getSlug(): ?string
+    {
+        return $this->slug;
+    }
+
+    public function setSlug(string $slug): self
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
 
     public function addVinyl(Vinyl $vinyl): self
     {
         if (!$this->vinyls->contains($vinyl)) {
             $this->vinyls->add($vinyl);
-            $vinyl->setArtiste($this);
+            $vinyl->setArtist($this);
         }
 
         return $this;
@@ -65,8 +76,8 @@ class Artist
     {
         if ($this->vinyls->removeElement($vinyl)) {
             // set the owning side to null (unless already changed)
-            if ($vinyl->getArtiste() === $this) {
-                $vinyl->setArtiste(null);
+            if ($vinyl->getArtist() === $this) {
+                $vinyl->setArtist(null);
             }
         }
 

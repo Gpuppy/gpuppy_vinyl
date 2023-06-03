@@ -18,7 +18,8 @@ class Vinyl
     private ?string $name = null;
 
     #[ORM\ManyToOne(inversedBy: 'vinyls')]
-    private ?Artist $Artiste = null;
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Artist $Artist = null;
 
     #[ORM\Column(length: 255)]
     private ?string $title = null;
@@ -58,14 +59,14 @@ class Vinyl
         return $this;
     }
 
-    public function getArtiste(): ?Artist
+    public function getArtist(): ?Artist
     {
-        return $this->Artiste;
+        return $this->Artist;
     }
 
-    public function setArtiste(?Artist $Artiste): self
+    public function setArtist(?Artist $Artist): self
     {
-        $this->Artiste = $Artiste;
+        $this->Artist = $Artist;
 
         return $this;
     }

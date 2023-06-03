@@ -4,7 +4,6 @@ namespace App\Controller;
 
 use App\Entity\Vinyl;
 use App\Repository\VinylRepository;
-use ContainerJbGzQ2x\getVinylRepositoryService;
 use Doctrine\Entity;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
