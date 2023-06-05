@@ -5,6 +5,8 @@ namespace App\Entity;
 use App\Repository\VinylRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\HttpFoundation\File\File;
 
 #[ORM\Entity(repositoryClass: VinylRepository::class)]
 class Vinyl
@@ -17,12 +19,12 @@ class Vinyl
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $title = null;
+
     #[ORM\ManyToOne(inversedBy: 'vinyls')]
     #[ORM\JoinColumn(nullable: false)]
     private ?Artist $Artist = null;
-
-    #[ORM\Column(length: 255)]
-    private ?string $title = null;
 
     #[ORM\Column(length: 255)]
     private ?string $slug = null;

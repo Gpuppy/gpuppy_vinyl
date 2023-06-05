@@ -34,8 +34,8 @@ class ArtistFixtures extends Fixture implements DependentFixtureInterface
                 'slug' => 'michael jackson'
             ],
             6 => [
-                'name' => 'Madona',
-                'slug' => 'madona'
+                'name' => 'DrDre',
+                'slug' => 'drdre'
             ],
             7 => [
                 'name' => 'Sia',

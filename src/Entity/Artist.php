@@ -18,8 +18,16 @@ class Artist
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $slug = null;
+
     #[ORM\OneToMany(mappedBy: 'artist', targetEntity: Vinyl::class)]
     private Collection $vinyls;
+
+    public function __toString()
+    {
+        return $this->name;
+    }
 
     public function __construct()
     {
@@ -42,6 +50,16 @@ class Artist
 
         return $this;
     }
+    public function getSlug(): ?string
+    {
+        return $this->slug;
+    }
+    public function setSlug(string $slug): self
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
 
     /**
      * @return Collection<int, Vinyl>
@@ -49,17 +67,6 @@ class Artist
     public function getVinyls(): Collection
     {
         return $this->vinyls;
-    }
-    public function getSlug(): ?string
-    {
-        return $this->slug;
-    }
-
-    public function setSlug(string $slug): self
-    {
-        $this->slug = $slug;
-
-        return $this;
     }
 
     public function addVinyl(Vinyl $vinyl): self
