@@ -66,9 +66,9 @@ class Vinyl
         return $this->Artist;
     }
 
-    public function setArtist(?Artist $Artist): self
+    public function setArtist(?Artist $artist): self
     {
-        $this->Artist = $Artist;
+        $this->Artist = $artist;
 
         return $this;
     }
