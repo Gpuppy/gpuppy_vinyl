@@ -8,10 +8,12 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\CollectionField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\MoneyField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\SlugField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class VinylCrudController extends AbstractCrudController
 {
@@ -27,7 +29,9 @@ class VinylCrudController extends AbstractCrudController
             TextField::new('title'),
             idField::new('id'),
             TextEditorField::new('content'),
-            TextField::new('attachment'),
+            //TextField::new('attachment'),
+            TextField::new('attachmentFile')->setFormType(VichImageType::class)->onlyWhenCreating(),
+            ImageField::new('attachment') ->setUploadDir('images/vinyl') ,
             MoneyField::new('price')->setCurrency('EUR'),
             DateField::new('createdAt'),
             DateField::new('updatedAt')
