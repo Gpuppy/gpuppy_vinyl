@@ -27,17 +27,20 @@ class VinylCrudController extends AbstractCrudController
     {
         return [
             TextField::new('title'),
+            SlugField::new('slug')->setTargetFieldName('title'),
+            AssociationField::new('artist'),
             idField::new('id'),
             TextEditorField::new('content'),
-            //TextField::new('attachment'),
-            TextField::new('attachmentFile')->setFormType(VichImageType::class)->onlyWhenCreating(),
-            ImageField::new('attachment') ->setUploadDir('images/vinyl') ,
+            ImageField::new('attachment')->setUploadDir('/') ,
             MoneyField::new('price')->setCurrency('EUR'),
             DateField::new('createdAt'),
-            DateField::new('updatedAt')
-            //SlugField::new('Slug')->setTargetFieldName('name'),
+            DateField::new('updatedAt'),
+            //idField::new('artist'),
             //CollectionField::new('artist')
-            //AssociationField::new('Artist')
+            //TextField::new('attachment'),
+            //TextField::new('attachmentFile')->setFormType(VichImageType::class)->onlyWhenCreating(),
+
+
 
         ];
     }

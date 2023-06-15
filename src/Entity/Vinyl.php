@@ -13,19 +13,19 @@ use Symfony\Component\HttpFoundation\File\File;
 class Vinyl
 {
     #[ORM\Id]
-    #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[ORM\GeneratedValue]
     private ?int $id = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $name = null;
+    ##[ORM\Column(length: 255)]
+    //private ?string $name = null;
 
     #[ORM\Column(length: 255)]
     private ?string $title = null;
 
     #[ORM\ManyToOne(inversedBy: 'vinyls')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?Artist $Artist = null;
+    private ?Artist $artist = null;
 
     #[ORM\Column(length: 255)]
     private ?string $slug = null;
@@ -49,17 +49,17 @@ class Vinyl
     private ?File $attachmentFile = null;
 
     ##[ORM\Column(nullable: true)]
-    #private ?string $imageName = null;
+    //private ?string $imageName = null;
 
     ##[ORM\Column(nullable: true)]
     #private ?int $imageSize = null;
 
-    public function getId(): ?int
+   public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getName(): ?string
+    /*public function getName(): ?string
     {
         return $this->name;
     }
@@ -69,16 +69,16 @@ class Vinyl
         $this->name = $name;
 
         return $this;
-    }
+    }*/
 
     public function getArtist(): ?Artist
     {
-        return $this->Artist;
+        return $this->artist;
     }
 
     public function setArtist(?Artist $artist): self
     {
-        $this->Artist = $artist;
+        $this->artist = $artist;
 
         return $this;
     }
@@ -175,6 +175,10 @@ class Vinyl
      *
      * @param File|\Symfony\Component\HttpFoundation\File\UploadedFile|null $imageFile
      */
+    public function getAttachmentFile(): ?File
+    {
+        return $this->attachmentFile;
+    }
     public function setAttachmentFile(?File $attachmentFile = null): void
     {
         $this->attachmentFile = $attachmentFile;
@@ -186,10 +190,7 @@ class Vinyl
         }
     }
 
-    public function getAttachmentFile(): ?File
-    {
-        return $this->attachmentFile;
-    }
+
 
     /*public function setImageName(?string $imageName): void
     {
