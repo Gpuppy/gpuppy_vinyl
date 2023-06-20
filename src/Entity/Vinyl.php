@@ -46,7 +46,7 @@ class Vinyl
     private ?string $attachment = null;
 
     #[Vich\UploadableField(mapping: 'vinyls', fileNameProperty: 'attachment'/*, size: 'imageSize'*/)]
-    private ?File $attachmentFile = null;
+    private ?File $attachmentFile = null ;
 
     ##[ORM\Column(nullable: true)]
     //private ?string $imageName = null;
@@ -59,7 +59,7 @@ class Vinyl
         return $this->id;
     }
 
-    /*public function getName(): ?string
+   /* public function getName(): ?string
     {
         return $this->name;
     }

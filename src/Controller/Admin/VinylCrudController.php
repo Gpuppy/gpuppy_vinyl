@@ -31,14 +31,15 @@ class VinylCrudController extends AbstractCrudController
             AssociationField::new('artist'),
             idField::new('id'),
             TextEditorField::new('content'),
-            ImageField::new('attachment')->setUploadDir('/') ,
+            ImageField::new('attachment')->setBasePath('uploads/attachments')->onlyOnIndex(),
             MoneyField::new('price')->setCurrency('EUR'),
             DateField::new('createdAt'),
             DateField::new('updatedAt'),
+            TextField::new('attachmentFile')->setFormType(VichImageType::class)->onlyWhenCreating()
             //idField::new('artist'),
             //CollectionField::new('artist')
             //TextField::new('attachment'),
-            //TextField::new('attachmentFile')->setFormType(VichImageType::class)->onlyWhenCreating(),
+
 
 
 

@@ -10,6 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+
 class VinylController extends AbstractController
 {
 
@@ -19,14 +20,13 @@ class VinylController extends AbstractController
     }
 
     #[Route('/vinyl', name: 'app_vinyl')]
-    public function index(VinylRepository $vinylRepository): Response
+    public function index(): Response
     {
-        $vinylsRepository = $vinylRepository->findAll();
-
         $vinyls = $this->entityManager->getRepository(Vinyl::class)->findAll();
         return $this->render('vinyl/index.html.twig', [
-            'vinyls' => '$vinyls',
+            'vinyls' => $vinyls
         ]);
     }
+
 
 }
