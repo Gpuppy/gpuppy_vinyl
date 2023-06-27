@@ -18,12 +18,11 @@ class CartService
     {
         $this->requestStack = $requestStack;
         $this->em = $em;
-
     }
 
     public function addToCart(int $id): void
     {
-        $cart = $this->requestStack->getSession()->get('cart',[]);
+        $cart = $this->getSession()->get('cart',[]);
         if(!empty($cart[$id])){
             $cart[$id]++;
         }else{
@@ -32,9 +31,26 @@ class CartService
         $this->getSession()->set('cart', $cart);
     }
 
+    public function removeToCart(int $id)
+    {
+        $cart = $this->requestStack->getSession()->get('cart', []);
+        unset($cart[$id]);
+        return $this->getSession()->set('cart', $cart);
+    }
+
     public function removeCartAll()
     {
         return $this->getSession()->remove('cart');
+    }
+    public function decrease(int $id) : void
+    {
+        $cart = $this->getSession()->get('cart', []);
+        if ($cart[$id] > 1) {
+            $cart[$id]--;
+        } else {
+            unset($cart[$id]);
+        }
+        $this->getSession()->set('cart', $cart);
     }
 
     public function getTotal() : array
@@ -44,7 +60,7 @@ class CartService
         if($cart) {
             foreach ($cart as $id => $quantity) {
                 $vinyl = $this->em->getRepository(Vinyl::class)->findOneBy(['id' => $id]);
-                if (!$vinyl) {
+                if(!$vinyl) {
                     //remove article and get out
                 }
                 $cartData[] = [

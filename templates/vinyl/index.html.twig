@@ -6,26 +6,22 @@
 
     <h1>Vinyles ✅</h1>
 
+<!--div class = "col-12">
 
-<div class = "col-12">
-
-
-</div>
+</div-->
 
 {% for vinyl in vinyls %}
 
     <h1>{{ vinyl.title }}</h1>
-    <strong>{{ vinyl.price }}</strong>
-    <p>{{ vinyl.content }}</p>
-    <p>{{ vinyl.artist }}</p>
+    <strong>{{ (vinyl.price / 100)|number_format(2, ',', ',') }}</strong>
+      <p>
+          {{ vinyl.artist }}
+      </p>
 
-    <img src="{{ vich_uploader_asset(vinyl, 'attachmentFile') }}" alt="{{ vinyl.attachment }}">
-    <a href="{{ path('cart_index',{id: vinyl.id}) }}">add to basket</a>
+   {# <img src="{{ vich_uploader_asset(vinyl, 'attachmentFile') }}" alt="{{ vinyl.attachment }}">#}
+    <a href="{{ path('cart_add',{id: vinyl.id}) }}">add to basket</a>
 
 {% endfor %}
-
-
-
 
 
     <div class="example-wrapper">
