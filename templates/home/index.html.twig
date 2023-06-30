@@ -9,11 +9,34 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <h1>Welcome to Gpuppy Vinyl! ✅</h1>
+    <div {{ react_component('MyComponent', { 'fullName': 'Gpuppy' }) }}>Loading... <i class="fas fa-cog fa-spin fa-3x"></i></div>
+    <div {{ react_component('Modal') }}></div>
 
+    {% block javascripts %}
+
+         {{ encore_entry_link_tags('app') }}
+        document.getElementByClassName("btn btn-outline-light me-2");
+            function loggedIn
+            $(".text-end").("ifConnected", function()
+            {
+        }
+
+
+        <div {{ react_component('Modal') }}></div>
+
+    {% endblock %}
+
+    {% if app.user %}
+
+        <div>
+            <button onclick = " window.location = '{{ path('app_logout') }}' ">Logout</button>
+        </div>
+
+    {% endif %}
 
     <div class = "col-12">
-
+        <div {{ react_component('Modal') }}></div>
     </div>
 </div>
 {% endblock %}

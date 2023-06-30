@@ -6,6 +6,7 @@
 <main class = "page-wrapper">
     {% if cart| length > 0 %}
         <div class = "container position-relative z index-2 pb-lg-5 pb-md-4 pb-2 ">
+        <form action ="{{ path('order_index') }}">
         <div class = "row">
             <div class = "col-lg-12 offset-lg-1 pt-1">
                 <h2 class = "pt-md-2 my-4 mt-lg-0">My basket</h2>
@@ -17,7 +18,7 @@
                 {% set total = total + (item.vinyl.price * item.quantity) %}
                 <div class = "d-sm-flex align-items-center border-top py-4">
                     <a class = "d-inline-block flex-shrink-0 bg-secondary rounded-1 p-sm-2 p-xl-3 mb-2 mb-sm-0" href="#">
-                        {# <img src="{{ asset ('/img/vinyl/cart/') }}" alt="Vinyl"> #} </a>
+                        <img src="{{vich_uploader_asset(item.vinyl,'attachmentFile')}}" alt="Vinyl">  </a>
                         <div class = "w-100 pt-1 ps-sm-4">
                             <div class="d-flex">
                                 <div class = "me-3">
@@ -55,8 +56,8 @@
         </div>
         <button class =" btn btn-warning " type="submit">Confirm</button>
             </div>
-
-        </div>
+               </div>
+        </form>
     {% else %}
         <div class="alert alert-info">
             Your cart is empty. Go to the <a href="{{ path('app_home') }}">product list</a>.

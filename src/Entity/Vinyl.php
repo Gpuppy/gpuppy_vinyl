@@ -54,7 +54,7 @@ class Vinyl
     ##[ORM\Column(nullable: true)]
     #private ?int $imageSize = null;
 
-   public function getId(): ?int
+    public function getId(): ?int
     {
         return $this->id;
     }
