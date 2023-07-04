@@ -24,6 +24,10 @@
         "watch": "encore dev --watch",
         "build": "encore production --progress"
     },
+    "engines": {
+        "node": "v18.16.*",
+        "npm": "9.5.1*"
+    },
     "dependencies": {
         "@headlessui/react": "^1.7.15",
         "prop-types": "^15.8.1"
