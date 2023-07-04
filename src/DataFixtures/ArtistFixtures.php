@@ -14,12 +14,12 @@ class ArtistFixtures extends Fixture implements DependentFixtureInterface
 
         $c = [
             1 => [
-                'name' => 'Jimmy hendrix',
+                'name' => 'Jimmy Hendrix',
                 'slug' => 'jimmy hendrix'
             ],
             2 => [
                 'name' => 'Elvis Presley',
-                'slug' => 'elvis Presley'
+                'slug' => 'elvis presley'
             ],
             3 => [
                 'name' => 'Dire Strait',

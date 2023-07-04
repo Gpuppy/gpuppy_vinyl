@@ -15,7 +15,7 @@
 
     {% block javascripts %}
 
-         {{ encore_entry_link_tags('app') }}
+      {#    {{ encore_entry_link_tags('app') }}
         document.getElementByClassName("btn btn-outline-light me-2");
             function loggedIn
             $(".text-end").("ifConnected", function()
@@ -23,7 +23,7 @@
         }
 
 
-        <div {{ react_component('Modal') }}></div>
+        <div {{ react_component('Modal') }}></div> #}
 
     {% endblock %}
 
