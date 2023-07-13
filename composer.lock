@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6b7dbf4f8714797f7bee2228afc8edb4",
+    "content-hash": "a9174ffa5aced0c85df8eefcc7beb459",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1888,16 +1888,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.22.0",
+            "version": "1.22.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "ec58baf7b3c7f1c81b3b00617c953249fb8cf30c"
+                "reference": "65c39594fbd8c67abfc68bb323f86447bab79cc0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/ec58baf7b3c7f1c81b3b00617c953249fb8cf30c",
-                "reference": "ec58baf7b3c7f1c81b3b00617c953249fb8cf30c",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/65c39594fbd8c67abfc68bb323f86447bab79cc0",
+                "reference": "65c39594fbd8c67abfc68bb323f86447bab79cc0",
                 "shasum": ""
             },
             "require": {
@@ -1929,9 +1929,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.22.0"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.22.1"
             },
-            "time": "2023-06-01T12:35:21+00:00"
+            "time": "2023-06-29T20:46:06+00:00"
         },
         {
             "name": "psr/cache",
@@ -6260,16 +6260,16 @@
         },
         {
             "name": "symfony/stimulus-bundle",
-            "version": "v2.9.1",
+            "version": "v2.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/stimulus-bundle.git",
-                "reference": "5261003352f52d9e1bcd0a04f099784ada2c3829"
+                "reference": "257ef052bebe491d7c29e9a4a8009edb82269e15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/stimulus-bundle/zipball/5261003352f52d9e1bcd0a04f099784ada2c3829",
-                "reference": "5261003352f52d9e1bcd0a04f099784ada2c3829",
+                "url": "https://api.github.com/repos/symfony/stimulus-bundle/zipball/257ef052bebe491d7c29e9a4a8009edb82269e15",
+                "reference": "257ef052bebe491d7c29e9a4a8009edb82269e15",
                 "shasum": ""
             },
             "require": {
@@ -6308,7 +6308,7 @@
                 "symfony-ux"
             ],
             "support": {
-                "source": "https://github.com/symfony/stimulus-bundle/tree/v2.9.1"
+                "source": "https://github.com/symfony/stimulus-bundle/tree/v2.10.0"
             },
             "funding": [
                 {
@@ -6324,7 +6324,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-05-30T15:13:12+00:00"
+            "time": "2023-06-29T19:46:37+00:00"
         },
         {
             "name": "symfony/stopwatch",
@@ -6931,16 +6931,16 @@
         },
         {
             "name": "symfony/ux-react",
-            "version": "v2.9.1",
+            "version": "v2.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/ux-react.git",
-                "reference": "dd98583f4ba1c8620b2e431a8db118854b2ef8f1"
+                "reference": "dc9a25c855a119029af39c62e7b564f83cb96ba5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/ux-react/zipball/dd98583f4ba1c8620b2e431a8db118854b2ef8f1",
-                "reference": "dd98583f4ba1c8620b2e431a8db118854b2ef8f1",
+                "url": "https://api.github.com/repos/symfony/ux-react/zipball/dc9a25c855a119029af39c62e7b564f83cb96ba5",
+                "reference": "dc9a25c855a119029af39c62e7b564f83cb96ba5",
                 "shasum": ""
             },
             "require": {
@@ -6987,7 +6987,7 @@
                 "symfony-ux"
             ],
             "support": {
-                "source": "https://github.com/symfony/ux-react/tree/v2.9.1"
+                "source": "https://github.com/symfony/ux-react/tree/v2.10.0"
             },
             "funding": [
                 {
@@ -7003,7 +7003,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-05-30T14:40:50+00:00"
+            "time": "2023-06-28T20:17:17+00:00"
         },
         {
             "name": "symfony/validator",

@@ -4,26 +4,153 @@
 
 {% block body %}
 <style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    .wrapper { margin: 20px/*1em auto*/; max-width: 1600px; width: 95%; font: 18px/1.5 sans-serif; }
+    .wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-<div class="example-wrapper">
+<div class="wrapper">
     <h1>Welcome to Gpuppy Vinyl! ✅</h1>
-    <div {{ react_component('MyComponent', { 'fullName': 'Gpuppy' }) }}>Loading... <i class="fas fa-cog fa-spin fa-3x"></i></div>
-    <div {{ react_component('Modal') }}></div>
 
-    {% block javascripts %}
-
-      {#    {{ encore_entry_link_tags('app') }}
-        document.getElementByClassName("btn btn-outline-light me-2");
+      {#   document.getElementByClassName("btn btn-outline-light me-2");
             function loggedIn
             $(".text-end").("ifConnected", function()
             {
         }
+ #}
 
 
-        <div {{ react_component('Modal') }}></div> #}
+    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel" data-bs-theme="light">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>Example headline.</h1>
+                        <p class="opacity-75">On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même. L'avantage du Lorem.</p>
+                        <p><a class="btn btn-lg btn-primary" href="/register">Sign up today</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item active">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Another example headline.</h1>
+                        <p>On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distraction.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+                <div class="container">
+                    <div class="carousel-caption text-end">
+                        <h1>Qu'est-ce que le Lorem Ipsum?</h1>
+                           <p>Le Lorem Ipsum est simplement du faux texte employé dans la</p>
+                        <p><a class="btn btn-lg btn-primary" href="/vinyl">Browse gallery</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <div class="col-lg-4">
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="/uploads/attachments/music-dr-dre-wallpaper-preview-64a1f92ef22ae695018970.jpg" alt="music-dr-dre-wallpaper-preview-64a1f92ef22ae695018970.jpg" width="400" height="400">
+                <h2 class="fw-normal">Heading</h2>
+                <p>Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéressé à un des mots latins les plus</p>
+                <p><a class="btn btn-secondary" href="#">View details »</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140"  src="/uploads/attachments/musician-singer-rock-n-roll-elvis-presley-wallpaper-preview-64a1e81c2cd1f318079059.jpg" alt="musician-singer-rock-n-roll-elvis-presley-wallpaper-preview-64a1e81c2cd1f318079059.jpg" width="400" height="400">
+                <h2 class="fw-normal">Heading</h2>
+                <p>Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéressé à un des mots latins les plus</p>
+                <p><a class="btn btn-secondary" href="#">View details »</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="/uploads/attachments/jimi-hendrix-graffiti-park-pink-155954538-64a1e71f1ffc7189024746.webp" alt="jimi-hendrix-graffiti-park-pink-155954538-64a1e71f1ffc7189024746.webp" width="400" height="400">
+                <h2 class="fw-normal">Heading</h2>
+                <p>Plusieurs variations de Lorem Ipsum peuvent être trouvées ici ou là, mPlusieurs variations de Lorem Ipsum peuvent être trouvées ici ou là, mcomposition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceau</p>
+                <p><a class="btn btn-secondary" href="#">View details »</a></p>
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading fw-normal lh-1">etraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en <span class="text-body-secondary">.</span></h2>
+                <p class="lead"></p>
+            </div>
+            <div class="col-md-5">
+                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading fw-normal lh-1"<span class="text-body-secondary">as fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuille</span></h2>
+                <p class="lead"></p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span class="text-body-secondary">Checkmate.</span></h2>
+                <p class="lead"></p>
+            </div>
+            <div class="col-md-5">
+                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
+
+
+    <!-- FOOTER -->
+    <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>© 2017–2023 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+
+    {% block javascripts %}
+
+
 
     {% endblock %}
 
