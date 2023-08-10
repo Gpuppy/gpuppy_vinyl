@@ -41,8 +41,6 @@ class VinylCrudController extends AbstractCrudController
             //TextField::new('attachment'),
 
 
-
-
         ];
     }
 
