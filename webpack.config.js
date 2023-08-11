@@ -21,9 +21,10 @@ Encore
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
     .addEntry('app', './assets/app.js')
+    //.addEntry('admin', '.assets/admin.js')
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
-    .enableStimulusBridge('./assets/controllers.json')
+    //.enableStimulusBridge('./assets/controllers.json')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
@@ -68,6 +69,9 @@ Encore
     // uncomment to get integrity="..." attributes on your script & link tags
     // requires WebpackEncoreBundle 1.4 or higher
     //.enableIntegrityHashes(Encore.isProduction())
+
+    // Provide the location of your controllers.json file
+    Encore.enableStimulusBridge('./assets/controllers.json')
 
     // uncomment if you're having problems with a jQuery plugin
     //.autoProvidejQuery()

@@ -46,17 +46,19 @@
         {% endblock %}
 
         {% block javascripts %}
+            {{ encore_entry_link_tags('app') }}
+            <!--link rel="stylesheet" href="/build/app.css"-->
             {{ encore_entry_script_tags('app') }}
 
             <script>
                 /*console.log('yo');
                 alert('red');*/
-                $(document).ready(function(){
+                //$(document).ready(function(){
                     // Change text of input button
-                    ("btn btn-outline-light me-2").prop("value", "Input New Text");
+                    //("btn btn-outline-light me-2").prop("value", "Input New Text");
 
                     // Change text of button element
-                    $("#myButton").html("Button New Text")});
+                    //$("#myButton").html("Button New Text")});
                 /*if(document.getElementsByName("btn btn-outline-light me-2") === loggedIn)
                     .textContent = 'You are logged in';*/
 
