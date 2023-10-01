@@ -32,11 +32,13 @@
 
          {% if app.user %}
 
-             <div>
-                 <button onclick = " window.location = '{{ path('app_logout') }}' ">Logout</button>
-             </div>
+
 
          {% endif %}
 
+
      </div>
+    <div>
+        <button onclick = " window.location = '{{ path('app_logout') }}' ">Logout</button>
+    </div>
 {% endblock %}

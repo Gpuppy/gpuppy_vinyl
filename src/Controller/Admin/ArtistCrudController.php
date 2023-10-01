@@ -22,7 +22,8 @@ class ArtistCrudController extends AbstractCrudController
         return [
             idField::new('id'),
             TextField::new('name'),
-            SlugField::new('slug')->setTargetFieldName('name')
+            SlugField::new('slug')->setTargetFieldName('name'),
+            AssociationField::new('vinyl')
                                             ];
     }
 

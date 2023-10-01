@@ -1,9 +1,11 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <!--div {{ react_component('MyComponent', { 'fullName': 'Gpuppy' }) }}>Loading... <i class="fas fa-cog fa-spin fa-3x"></i></div>
-    <div {{ react_component('Modal') }}></div-->
+    <div {{ react_component('MyComponent', { 'fullName': 'Gpuppy' }) }}>Loading... <i class="fas fa-cog fa-spin fa-3x"></i></div>
+    <div {{ react_component('Modal') }}></div>
+<script>
 
+</script>
     {% if error %}
 
         <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -25,4 +27,5 @@
 
         <button type="submit">login</button>
     </form>
+
 {% endblock %}

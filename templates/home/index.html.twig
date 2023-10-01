@@ -11,12 +11,6 @@
 <div class="wrapper">
     <h1>Welcome to Gpuppy Vinyl! ✅</h1>
 
-      {#   document.getElementByClassName("btn btn-outline-light me-2");
-            function loggedIn
-            $(".text-end").("ifConnected", function()
-            {
-        }
- #}
 
 
     <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel" data-bs-theme="light">
@@ -69,11 +63,10 @@
 
 
     <!-- Marketing messaging and featurettes================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
 
     <div class="container marketing">
 
-        <!-- Three columns of text below the carousel -->
+        <!-- Three columns below the carousel -->
         <div class="row">
             <div class="col-lg-4">
                 <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="/uploads/attachments/music-dr-dre-wallpaper-preview-64a1f92ef22ae695018970.jpg" alt="music-dr-dre-wallpaper-preview-64a1f92ef22ae695018970.jpg" width="400" height="400">
@@ -106,7 +99,8 @@
                 <p class="lead"></p>
             </div>
             <div class="col-md-5">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="800" height="800" img  src="/uploads/attachments/singers-sia-wallpaper2-64a3cb2d179dd038651646.jpg" xmlns="http://www.w3.org/2000/svg" role="img"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em"></text>
+
             </div>
         </div>
 
@@ -114,11 +108,11 @@
 
         <div class="row featurette">
             <div class="col-md-7 order-md-2">
-                <h2 class="featurette-heading fw-normal lh-1"><span class="text-body-secondary">as fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuille</span></h2>
+                <h2 class="featurette-heading fw-normal lh-1"><span class="text-body-secondary"> since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</span></h2>
                 <p class="lead"></p>
             </div>
             <div class="col-md-5 order-md-1">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="800" height="800" src="/uploads/attachments/elvis-presley-wallpaper-preview2-64a3cf0a158c6711698514.jpg "   xmlns="http://www.w3.org/2000/svg" role="img"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em"></text>
             </div>
         </div>
 
@@ -126,11 +120,11 @@
 
         <div class="row featurette">
             <div class="col-md-7">
-                <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span class="text-body-secondary">Checkmate.</span></h2>
+                <h2 class="featurette-heading fw-normal lh-1">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and <span class="text-body-secondary">Checkmate.</span></h2>
                 <p class="lead"></p>
             </div>
             <div class="col-md-5">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="800" height="800" src="/uploads/attachments/lady-gaga-hd-wallpaper-fame-64a56d0b6d415159447274.jpg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em"></text></img>
             </div>
         </div>
 
@@ -149,7 +143,25 @@
 
     {% block javascripts %}
 
+        <div {{ react_component('Hello', { 'email': '' }) }}>
+            Loading... <i class="fas fa-cog fa-spin fa-3x"></i>
 
+        </div>
+
+        {# Component living in a subdirectory: "assets/react/controllers/Admin/OtherComponent" #}
+        <div {{ react_component('Admin/OtherComponent') }}></div>
+        {#   document.getElementByClassName("btn btn-outline-light me-2");
+            function loggedIn
+            $(".text-end").("ifConnected", function()
+            {
+        }
+        #}
+<script>
+    if(window.navigator.onLine)
+    {
+        console.log('Logged in as: ' + User.email().getName());
+    }
+</script>
 
     {% endblock %}
 
@@ -161,8 +173,11 @@
 
     {% endif %}
 
-    <div class = "col-12">
-        <div {{ react_component('Modal') }}></div>
-    </div>
+
+
+
+
+
+</div>
 </div>
 {% endblock %}
