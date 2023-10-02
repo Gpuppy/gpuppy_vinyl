@@ -13,7 +13,18 @@ import './styles/app.css';
 // start the Stimulus application
 import './bootstrap';
 
+
 // assets/app.js
-//import { registerReactControllerComponents } from '@symfony/ux-react';
-//registerReactControllerComponents(require.context('./react/controllers', true, /\\.(j|t)sx?$/));
+/*import { registerReactControllerComponents } from '@symfony/ux-react';
+registerReactControllerComponents(require.context('./react/controllers', true, /\\.(j|t)sx?$/));*/
+
+// assets/app.js
+import { startStimulusApp } from '@symfony/stimulus-bridge';
+
+export const app = startStimulusApp(require.context(
+    '@symfony/stimulus-bridge/lazy-controller-loader!./controllers',
+    true,
+    /\.(j|t)sx?$/
+));
+
 

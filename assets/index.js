@@ -13,3 +13,7 @@ export default function(name) {
     return `Yo yo ${name} - welcome to Encore!`;
 };
 
+import Swup from 'swup'
+
+const swup = new Swup()
+
