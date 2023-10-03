@@ -9,11 +9,11 @@ const root = createRoot(document.getElementById('app'));
 root.render(<h1>Hello, world</h1>); */
 
 
-export default function(name) {
+/*export default function(name) {
     return `Yo yo ${name} - welcome to Encore!`;
 };
 
 import Swup from 'swup'
 
-const swup = new Swup()
+const swup = new Swup()*/
 
