@@ -55,7 +55,7 @@ class CartController extends AbstractController
      *
      * @return float|int
      */
-    public function getTotal(): float
+    /*public function getTotal(): float
     {
         return $this->getVinyl()->getPrice() * $this->getQuantity();
     }
@@ -65,7 +65,7 @@ class CartController extends AbstractController
      * @return float
      */
 
-    /*public function getTotal(): float
+    public function getTotal(): float
     {
         $total = 0;
 
@@ -74,7 +74,7 @@ class CartController extends AbstractController
         }
 
         return $total;
-    }*/
+    }
 
 
 
