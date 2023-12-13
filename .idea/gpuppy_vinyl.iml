@@ -148,6 +148,9 @@
       <excludeFolder url="file://$MODULE_DIR$/public/build" />
       <excludeFolder url="file://$MODULE_DIR$/public/bundles" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/ux-swup" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-php83" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/clock" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/clock" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
