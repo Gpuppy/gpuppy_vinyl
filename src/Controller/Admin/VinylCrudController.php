@@ -30,19 +30,9 @@ class VinylCrudController extends AbstractCrudController
             TextEditorField::new('content'),
             TextField::new('attachmentFile')->setFormType(VichImageType::class)->onlyWhenCreating(),
             ImageField::new('attachment')->setBasePath('uploads/attachments')->onlyOnIndex(),
-
-            //ImageField::new('attachment')->setBasePath('uploads/attachments')->onlyOnIndex()/*->setUploadDir('/assets')*/,
             MoneyField::new('price')->setCurrency('EUR'),
             DateField::new('createdAt'),
             DateField::new('updatedAt')
-
-
-            //TextField::new('attachmentFile')->setFormType(VichImageType::class)->onlyWhenCreating()
-
-
-
-            //TextField::new('attachment')->setFormType(VichImageType::class)->onlyWhenCreating(),
-        //ImageField::new('imageName')->setBasePath('/asset/img/gallery')->onlyOnIndex()
 
         ];
     }

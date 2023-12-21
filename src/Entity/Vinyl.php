@@ -17,9 +17,6 @@ class Vinyl
     #[ORM\GeneratedValue]
     private ?int $id = null;
 
-    ##[ORM\Column(length: 255)]
-    //private ?string $name = null;
-
     #[ORM\Column(length: 255)]
     private ?string $title = null;
 
@@ -45,31 +42,14 @@ class Vinyl
     #[ORM\Column(length: 255)]
     private ?string $attachment = null;
 
-    #[Vich\UploadableField(mapping: 'vinyls', fileNameProperty: 'attachment'/*, size: 'imageSize'*/)]
+    #[Vich\UploadableField(mapping: 'vinyls', fileNameProperty: 'attachment')]
     private ?File $attachmentFile = null ;
 
-    ##[ORM\Column(nullable: true)]
-    //private ?string $imageName = null;
-
-    ##[ORM\Column(nullable: true)]
-    #private ?int $imageSize = null;
 
     public function getId(): ?int
     {
         return $this->id;
     }
-
-   /* public function getName(): ?string
-    {
-        return $this->name;
-    }
-
-    public function setName(string $name): self
-    {
-        $this->name = $name;
-
-        return $this;
-    }*/
 
     public function getArtist(): ?Artist
     {
@@ -189,9 +169,6 @@ class Vinyl
             $this->updatedAt = new \DateTimeImmutable();
         }
     }
-
-
-
 
 
 }
